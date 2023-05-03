@@ -45,7 +45,7 @@ def hello_world_2():
     bcs_index = request.get_json()["bcs_index"]
 
     # Get params for input
-    meta_passos = 4500 * np.exp(-age/19.5)
+    meta_passos = steps_goal
     peso_ideal = (100/(((bcs_index - 5) * 10) + 100)) * weight
     indice_peso = 1 - ((np.abs(peso_ideal - weight) / peso_ideal))
     indice_passos = min(1, max(0, np.mean(last_steps)/meta_passos))
